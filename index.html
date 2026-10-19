@@ -8,28 +8,44 @@
      this site all games you will get to make it code on our own -->
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body
         {
-           height: 100vh;
-           width: 100vw;
+           min-height: 100vh;
+           min-height: 100dvh;
+           width: 100%;
            display: flex;
+           flex-direction: column;
            justify-content: center;
            align-items: center;
            margin: 0;
+           padding: 10px;
            background-color: black;
+           overflow: hidden;
+        }
 
+        #game-container
+        {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(100vmin, 90vw);
+            height: min(100vmin, 90vw);
+            flex-shrink: 0;
         }
 
         #game-board
         {
             background-color: white;
-            width: 100vmin; /* basically vmin we form a Grid over our webpage */
-            height: 100vmin;
+            width: 100%;
+            height: 100%;
             display: grid;
             grid-template-rows: repeat(21,1fr); /* repeat the rows 21 times and 1fr -> 1 fraction  */
             grid-template-columns: repeat(21,1fr);
-
-
         }
 
         .snake
@@ -46,23 +62,72 @@
 
         /*  support for small mobile screens and many devices media logic */
         @media (max-width: 480px) {
-        #game-board {
-        width: min(100vmin, 100vw);
-        height: min(100vmin, 100vw);
+            #game-container {
+                width: min(90vw, 55vh);
+                height: min(90vw, 55vh);
+            }
         }
-    }
+
+        /* Mobile arrow controls */
+        #mobile-controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .horizontal-controls {
+            display: flex;
+            gap: 12px;
+        }
+
+        #mobile-controls button {
+            width: 60px;
+            height: 50px;
+            font-size: 24px;
+            border: 2px solid #badd78;
+            border-radius: 10px;
+            background-color: #222;
+            color: white;
+            cursor: pointer;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        #mobile-controls button:active {
+            background-color: #badd78;
+            color: black;
+        }
     </style>
     
 
 </head>
 <body>
 
-    <div id="game-board"></div>
+    <div id="game-container">
+        <div id="game-board"></div>
+
+        <!-- Mobile touch controls -->
+        <div id="mobile-controls">
+            <button type="button" data-key="ArrowUp" aria-label="Move up">⬆️</button>
+
+            <div class="horizontal-controls">
+                <button type="button" data-key="ArrowLeft" aria-label="Move left">⬅️</button>
+                <button type="button" data-key="ArrowDown" aria-label="Move down">⬇️</button>
+                <button type="button" data-key="ArrowRight" aria-label="Move right">➡️</button>
+            </div>
+        </div>
+    </div>
+
     <!-- we will use many javascript files that contains different sort of logic there will be passing the data from one file to other file -->
     <!-- for that reason i have written the below -> defer type="module" -->
     <script src="game.js" defer type="module"></script>
     
 </body>
 </html>
-
-
