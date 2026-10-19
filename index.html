@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <!-- https://www.coolmathgames.com/0-snake 
+     this site all games you will get to make it code on our own -->
+
+    <style>
+        body
+        {
+           height: 100vh;
+           width: 100vw;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin: 0;
+           background-color: black;
+
+        }
+
+        #game-board
+        {
+            background-color: white;
+            width: 100vmin; /* basically vmin we form a Grid over our webpage */
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(21,1fr); /* repeat the rows 21 times and 1fr -> 1 fraction  */
+            grid-template-columns: repeat(21,1fr);
+
+
+        }
+
+        .snake
+        {
+            background-color: #badd78;
+            border: 0.25vmin solid black;
+        }
+
+        .food
+        {
+            background-color: #ad2f2f;
+            border: 0.25vmin solid black;
+        }
+
+        /*  support for small mobile screens and many devices media logic */
+        @media (max-width: 480px) {
+        #game-board {
+        width: min(100vmin, 100vw);
+        height: min(100vmin, 100vw);
+        }
+    }
+    </style>
+    
+
+</head>
+<body>
+
+    <div id="game-board"></div>
+    <!-- we will use many javascript files that contains different sort of logic there will be passing the data from one file to other file -->
+    <!-- for that reason i have written the below -> defer type="module" -->
+    <script src="game.js" defer type="module"></script>
+    
+</body>
+</html>
+
+
