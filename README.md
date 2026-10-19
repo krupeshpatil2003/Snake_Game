@@ -6,9 +6,11 @@ A simple and interactive Snake Game built using HTML, CSS, and JavaScript. The p
 
 ## 📸 Screenshot Snake Game
 
-Add your project screenshots here:
+<img src="Snake Game 1.jpeg" alt="Snake Game Preview" width="700">
 
-<img src="snake-game-screenshot.png" alt="Snake Game Preview" width="700">
+<img src="Snake Game 2.jpeg" alt="Snake Game Preview" width="700">
+
+<img src="Snake Game 3.jpeg" alt="Snake Game Preview" width="700">
 
 ---
 
