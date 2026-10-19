@@ -1,6 +1,6 @@
 # 🐍 Snake Game
 
-A simple and interactive Snake Game built using HTML, CSS, and JavaScript. The player controls a snake that moves around the grid to eat food, grow longer, and achieve a higher score while avoiding collisions. This project demonstrates core JavaScript concepts, game logic, and DOM manipulation in a fun and engaging way.
+A simple and interactive Snake Game built using HTML, CSS, and JavaScript. The player controls a snake that moves around the grid to eat food, grow longer while avoiding collisions. This project demonstrates core JavaScript concepts, game logic, and DOM manipulation in a fun and engaging way.
 
 ---
 
