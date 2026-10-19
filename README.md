@@ -33,8 +33,6 @@ A simple and interactive Snake Game built using HTML, CSS, and JavaScript. The p
 * Food generation at random positions
 * Snake grows longer after eating food
 * Collision detection with the snake's body and grid boundaries
-* Game-over functionality
-* Modular JavaScript code for better organization
 * Clean and simple user interface
 * Responsive layout for different screen sizes
 
