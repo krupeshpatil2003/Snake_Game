@@ -15,7 +15,7 @@ export function update() // Here I have export so Now I have to import these fil
 {
     addSegments(); // define it to the zero value 
     // InputDirection I want to set in update function I will set InputDirection
-    const inputDirection = getInputDirection();
+    const inputDirection = getInputDirection()
 
     //console.log('Update snake');
     // length-2 means I want to go from last i want to start the iteration till first index 0 i want to go means in reverse way I want to iterate 
